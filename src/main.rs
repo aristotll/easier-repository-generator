@@ -14,7 +14,10 @@ struct MyTemplate {
 }
 
 
-fn main() {
+fn main() {}
+
+#[test]
+fn generate_easier_repository() {
 // Render the template with the variable values
     let variables = MyTemplateVariables {
         model_name: "MyModel".to_owned(),
@@ -22,5 +25,5 @@ fn main() {
     };
     let template = MyTemplate { variables };
     let rendered = template.render().unwrap();
-    println!("{}", rendered);
+    println!("{}", rendered)
 }
